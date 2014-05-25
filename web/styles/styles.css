@@ -1,0 +1,37 @@
+.game-container {
+	margin-top: 60px;
+}
+
+.card {
+	display: inline-block;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.card.full-card, .card.full-card .card-row.full-row {
+	background-color: #19b806;
+}
+
+.card-row {
+}
+
+.card-row.full-row {
+	background-color: #98b898;
+}
+
+
+.card-cell {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #245269;
+}
+
+.card-cell.has-been {
+	background-color: #5cb85c;
+	color: red;
+}
+
+.card-cell.current {
+	background-color: #b8ac1f;
+}

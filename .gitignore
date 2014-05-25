@@ -3,7 +3,6 @@
 
 composer.lock
 
-runtime/games/*
+/runtime/*
 
-vendor
-vendor/*
+/vendor/*

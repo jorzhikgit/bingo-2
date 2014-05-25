@@ -1,8 +1,8 @@
 .idea
 .idea/*
 
+
+runtime/games
+
 composer.lock
-
-/runtime/*
-
-/vendor/*
+vendor

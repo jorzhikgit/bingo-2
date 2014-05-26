@@ -1,12 +1,7 @@
 <?php
 
 define('WEB_PATH', __DIR__ . '/');
-
-if($_SERVER['HTTP_HOST'] == 'localhost') {
-	define('INDEX_PATH', __DIR__ . '/../');
-} else {
-	define('INDEX_PATH', __DIR__ . '/../bingoapp/');
-}
+define('INDEX_PATH', __DIR__ . '/../');
 
 require INDEX_PATH . 'vendor/autoload.php';
 
@@ -28,15 +23,19 @@ $app->container->singleton('gamePersister', function() {
 	));
 });
 
+
+
+// urls
+
+// pages
 $app->get('/', function() {
 	\Slim\Slim::getInstance()->view()->display('index.php');
 });
-
-
 $app->get('/game', function() {
 	Slim::getInstance()->view()->display('game.php');
 });
 
+// api
 $app->get('/game/create/:number', function($number) {
 	$game = Slim::getInstance()->bingo->createGame($number);
 	$game->save();

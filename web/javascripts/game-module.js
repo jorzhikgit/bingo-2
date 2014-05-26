@@ -116,7 +116,7 @@ angular.module('bingo', [])
 
 		function stopAuto() {
 			$scope.auto.started = false;
-			$timeout.cancel($scope.auto.promise);
+			$interval.cancel($scope.auto.promise);
 		}
 
 		function startAuto() {

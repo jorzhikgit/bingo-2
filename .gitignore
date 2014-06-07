@@ -6,3 +6,6 @@ runtime/games
 
 composer.lock
 vendor
+
+config/*
+!default.php

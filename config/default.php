@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aretmy
- * Date: 25.05.14
- * Time: 20:39
- */ 
+return array(
+	'debug' => false,
+	'templates.path' => INDEX_PATH . 'views'
+);

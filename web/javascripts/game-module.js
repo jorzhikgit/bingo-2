@@ -24,7 +24,6 @@ angular.module('bingo', [])
 		$scope.start = function() {
 			$http.get('/game/create/' + $scope.data.cardsNumber)
 				.success(function(data) {
-					$scope.gameId = data.id;
 					$scope.setCards(data.cards);
 				});
 		};
@@ -94,7 +93,7 @@ angular.module('bingo', [])
 		}
 
 		$scope.nextNumber = function() {
-			$http.get('/game/' + $scope.gameId + '/turn/' + $scope.turn)
+			$http.get('/game/turn/' + $scope.turn)
 				.success(function(data) {
 					$scope.newTurn(data.number);
 					$scope.turn++;
@@ -102,12 +101,12 @@ angular.module('bingo', [])
 		};
 
 		$scope.playAll = function() {
-			$http.get('/game/' + $scope.gameId + '/playAll/' + $scope.turn)
+			$http.get('/game/playAll/' + $scope.turn)
 				.success(function(data) {
 					angular.forEach(data.numbers, function(number) {
 						$scope.newTurn(number);
 					});
-				})
+				});
 		};
 
 		$scope.toggleAuto = function() {

@@ -50,10 +50,12 @@
 
 </div>
 
+<script src="https://cdn.socket.io/socket.io-1.0.4.js"></script>
 <script src="/javascripts/game-module.js"></script>
 <script>
 	$(function() {
 		angular.bootstrap(document, ['bingo']);
+		new io('http://socket.aretmy.ru/');
 	});
 </script>
 
